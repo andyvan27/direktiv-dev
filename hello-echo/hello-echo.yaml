@@ -1,0 +1,13 @@
+direktiv_api: workflow/v1
+functions:
+- id: get
+  type: reusable
+  image: gcr.io/direktiv/functions/bash:1.0
+states:
+- id: getter
+  type: action
+  action:
+    function: get
+    input:
+      commands:
+      - command: echo Hello from echo
